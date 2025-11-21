@@ -1,0 +1,237 @@
+:root {
+    --branco: #FFFFFF;
+    --cor-fundo: #E0E1DD;
+    --azul: #778DA9;
+    --azul-escuro: #415A77;
+    --texto-claro: #ADB5BD;
+    --texto-escuro: #343A40;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    cursor: url('cursor.png'), auto;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-fundo);
+    color: var(--texto-claro);
+}
+
+h1 {
+    color: var(--texto-escuro);
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+main {
+    width: 90%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+label {
+    font-size: larger;
+    font-weight: 600;
+    color: var(--texto-escuro);
+}
+
+
+
+/* tamanho da senha */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"] {
+    font-size: 20px;
+    text-align: center;
+    height: 50px;
+    width: 100px;
+    border-radius: 22px;
+    border: 2px solid var(--texto-claro);
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border: 2px solid var(--texto-escuro);
+}
+
+
+/* opções da senha */
+.opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 70%;
+    margin: 30px 0;
+}
+
+.opcao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    width: 100px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+/* botões toggle */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    border-radius: 22px;
+    background-color: var(--branco);
+    transition: .3s;
+}
+
+.slider::before {
+    position: absolute;
+    content: '';
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: var(--texto-claro);
+    left: 7px;
+    bottom: 5px;
+    transition: .3s;
+}
+
+input:checked + .slider{
+    background-color: var(--azul-escuro);
+}
+
+input:checked + .slider::before {
+    background-color: var(--azul);
+    transform: translateX(47px);
+}
+
+
+/* barra de forca */
+.barra-forca {
+    border-radius: 10px;
+    height: 10px;
+    width: 100%;
+    background-color: var(--texto-claro);
+}
+
+.forca {
+    border-radius: 10px;
+    height: 10px;
+    width: 0%;
+    background-color: var(--azul-escuro);
+    transition: .3s;
+}
+
+
+/* botão de gerar senha */
+.gerar-btn {
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    font-size: medium;
+    color: var(--branco);
+    background-color: var(--azul);
+    border: none;
+    transition: .2s ease;
+}
+
+.gerar-btn:hover {
+    background-color: var(--azul-escuro);
+}
+
+/* senha */
+#senha-criada.desabilitada{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    font-size: medium;
+    color: var(--texto-claro);
+    background-color: var(--cor-fundo);
+    border: 2px solid var(--texto-claro);
+}
+
+#senha-criada.habilitada {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    font-size: medium;
+    color: var(--azul);
+    background-color: var(--branco);
+    border: 2px solid var(--azul);
+}
+
+#senha-criada.habilitada .icone {
+    color: var(--azul-escuro);
+}
+
+.icone {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+    padding: 6px;
+    border-radius: 6px;
+    background-color: var(--texto-claro);
+    color: var(--cor-fundo);
+    --ionicon-stroke-width : 60px ;
+}
+
+
+/* footer */
+.redes-sociais {
+    display: flex;
+    gap: 30px;
+    font-size: 30px;
+}
+
+.redes-sociais a {
+    color: var(--azul);
+    transition: transform .2s ease-in-out;
+}
+
+.redes-sociais a:hover {
+    color: var(--azul);
+    transform: translateY(-7px) scale(1.2);
+}

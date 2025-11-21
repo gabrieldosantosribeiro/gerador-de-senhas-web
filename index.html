@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerados de Senhas</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <!-- fonte montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <main>
+        <h1>GERADOR DE SENHAS</h1>
+
+        <div class="opcoes">
+            <label class="opcao">
+                <label for="tamanho">Tamanho</label>
+                <input type="number" id="tamanho" placeholder="4 - 20" min="4" max="20">
+            </label>
+
+            <label class="opcao">
+                <label for="maiusculas">Maiúsculas</label>
+                <div class="switch">
+                    <input type="checkbox" id="maiusculas">
+                    <span class="slider"></span>
+                </div>
+            </label>
+
+            <label class="opcao">
+                <label for="minusculas">Minúsculas</label>
+                <div class="switch">
+                    <input type="checkbox" id="minusculas">
+                    <span class="slider"></span>
+                </div>
+            </label>
+
+            <label class="opcao">
+                <label for="numeros">Números</label>
+                <div class="switch">
+                    <input type="checkbox" id="numeros">
+                    <span class="slider"></span>
+                </div>
+            </label>
+
+            <label class="opcao">
+                <label for="simbolos">Símbolos</label>
+                <div class="switch">
+                    <input type="checkbox" id="simbolos">
+                    <span class="slider"></span>
+                </div>
+            </label>
+        </div>
+
+        <div class="barra-forca">
+            <div class="forca"></div>
+        </div>
+
+        <button type="button" class="gerar-btn" onclick="gerarSenha()">GERAR SENHA</button>
+
+        <div id="senha-criada" class="desabilitada">
+            <p class="senha">SENHA QUE FOR GERADA...</p>
+            <ion-icon name="copy-outline" class="icone"></ion-icon>
+        </div>
+
+        <p>© 2025 Gabriel dos Santos Ribeiro</p>
+        <div class="redes-sociais">
+            <a href="https://www.instagram.com/gabsref" target="_blank">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a href="https://www.linkedin.com/in/gabriel-santos-ribeiro-196110257" target="_blank">
+                <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+            <a href="https://wa.me/5511975656755" target="_blank">
+                <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+            <a href="https://github.com/gabrieldosantosribeiro" target="_blank">
+                <ion-icon name="logo-github"></ion-icon>
+            </a>
+        </div>
+
+    </main>
+
+    <script src="libs/chance.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <!-- icones -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
