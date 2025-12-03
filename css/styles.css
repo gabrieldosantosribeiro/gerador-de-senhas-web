@@ -28,7 +28,7 @@ body {
     justify-content: center;
     background-color: var(--cor-fundo);
     color: var(--texto-claro);
-    margin: 100px 0;
+    padding: 100px 0;
 }
 
 h1 {
