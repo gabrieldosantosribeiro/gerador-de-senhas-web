@@ -20,13 +20,13 @@
         <div class="opcoes">
             <label class="opcao">
                 <label for="tamanho">Tamanho</label>
-                <input type="number" id="tamanho" placeholder="4 - 20" min="4" max="20">
+                <input type="number" id="tamanho" placeholder="4 - 20" min="4" max="20" oninput="atualizarForca()">
             </label>
 
             <label class="opcao">
                 <label for="maiusculas">Maiúsculas</label>
                 <div class="switch">
-                    <input type="checkbox" id="maiusculas">
+                    <input type="checkbox" id="maiusculas" onchange="atualizarForca()">
                     <span class="slider"></span>
                 </div>
             </label>
@@ -34,7 +34,7 @@
             <label class="opcao">
                 <label for="minusculas">Minúsculas</label>
                 <div class="switch">
-                    <input type="checkbox" id="minusculas">
+                    <input type="checkbox" id="minusculas" onchange="atualizarForca()">
                     <span class="slider"></span>
                 </div>
             </label>
@@ -42,7 +42,7 @@
             <label class="opcao">
                 <label for="numeros">Números</label>
                 <div class="switch">
-                    <input type="checkbox" id="numeros">
+                    <input type="checkbox" id="numeros" onchange="atualizarForca()">
                     <span class="slider"></span>
                 </div>
             </label>
@@ -50,7 +50,7 @@
             <label class="opcao">
                 <label for="simbolos">Símbolos</label>
                 <div class="switch">
-                    <input type="checkbox" id="simbolos">
+                    <input type="checkbox" id="simbolos" onchange="atualizarForca()">
                     <span class="slider"></span>
                 </div>
             </label>
@@ -62,9 +62,9 @@
 
         <button type="button" class="gerar-btn" onclick="gerarSenha()">GERAR SENHA</button>
 
-        <div id="senha-criada" class="desabilitada">
+        <div id="senha-criada">
             <p class="senha">SENHA QUE FOR GERADA...</p>
-            <ion-icon name="copy-outline" class="icone"></ion-icon>
+            <ion-icon name="copy-outline" class="icone" onclick="copiarSenha()"></ion-icon>
         </div>
 
         <p>© 2025 Gabriel dos Santos Ribeiro</p>
@@ -84,6 +84,13 @@
         </div>
 
     </main>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p>O tamanho da senha deve ser maior que 4 e menor que 20</p>
+            <button onclick="fecharPopup()">Ok</button>
+        </div>
+    </div>
 
     <script src="libs/chance.js"></script>
 

@@ -5,6 +5,11 @@
     --azul-escuro: #415A77;
     --texto-claro: #ADB5BD;
     --texto-escuro: #343A40;
+
+    /* cores da barra de força */
+    --vermelho: #d90429;
+    --amarelo: #ffd500;
+    --verde: #80b918;
 }
 
 * {
@@ -41,7 +46,7 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 25px;
-    margin: 30px 0;
+    margin: 100px 0;
 }
 
 label {
@@ -104,6 +109,10 @@ input[type="number"]:focus {
     opacity: 0;
     width: 0;
     height: 0;
+}
+
+input.erro {
+    border: 2px solid red;
 }
 
 
@@ -174,7 +183,7 @@ input:checked + .slider::before {
 }
 
 /* senha */
-#senha-criada.desabilitada{
+#senha-criada{
     position: relative;
     display: flex;
     align-items: center;
@@ -234,4 +243,46 @@ input:checked + .slider::before {
 .redes-sociais a:hover {
     color: var(--azul);
     transform: translateY(-7px) scale(1.2);
+}
+
+
+
+/* popup */
+#popup {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+}
+
+#popup .popup-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    gap: 15px;
+    align-items: center;
+    background-color: var(--branco);
+    border: 2px solid var(--azul-escuro);
+    padding: 15px 25px;
+    margin: 0px 20px;
+    border-radius: 15px;
+    color: var(--azul-escuro);
+}
+
+#popup .popup-content button {
+    cursor: pointer;
+    background-color: var(--azul);
+    color: var(--branco);
+    border: none;
+    padding: 10px 30px;
+    border-radius: 8px;
+    transition: .2s ease;
+}
+
+#popup .popup-content button:hover {
+    background-color: var(--azul-escuro);
 }
