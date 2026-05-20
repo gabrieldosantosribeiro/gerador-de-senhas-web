@@ -6,7 +6,7 @@ Um gerador de senhas moderno e personalizável feito com **HTML, CSS e JavaScrip
 
 ## 🔗 Acesse o projeto online
 O projeto está disponível para testar no navegador:  
-[Visitar Projeto](https://github.com/gabrieldosantosribeiro/gerador-de-senhas-web)
+[Visitar Projeto](https://gabrieldosantosribeiro.github.io/gerador-de-senhas-web/)
 
 ---
 
